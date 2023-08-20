@@ -9,7 +9,7 @@ class Package extends Model
 {
     use HasFactory;
 
-    protected $table = 'package';
+    protected $table = 'packages';
 
     // samakan dengan column yang ada di table
     protected $fillable = [

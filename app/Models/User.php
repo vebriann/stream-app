@@ -19,6 +19,7 @@ class User extends Authenticatable
      */
 
      // samakan dengan column yang ada di table
+
     protected $fillable = [
         'name',
         'email',
