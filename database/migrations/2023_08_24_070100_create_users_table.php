@@ -7,9 +7,6 @@ use PhpParser\Node\NullableType;
 
 return new class extends Migration
 {
-    /**
-     * Run the migrations.
-     */
     public function up(): void
     {
         Schema::create('users', function (Blueprint $table) {
@@ -19,14 +16,11 @@ return new class extends Migration
             $table->string('password');
             $table->string('phone_number');
             $table->string('avatar')->nullable();
-            $table->enum('role', ['admin','member']);
+            $table->enum('role', ['admin', 'member']);
             $table->timestamps();
         });
     }
 
-    /**
-     * Reverse the migrations.
-     */
     public function down(): void
     {
         Schema::dropIfExists('users');
